@@ -1,5 +1,6 @@
 package br.com.etecia.appempresaabc;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -31,7 +32,8 @@ public class LoginActivity extends AppCompatActivity {
         if (usuario.equals("etecia") && senha.equals("etecia")) {
 
           Toast.makeText(getApplicationContext(),"Bem vindo ao sistema",Toast.LENGTH_SHORT).show();
-
+            Intent intent = new Intent( LoginActivity.this,MenuPrincipalActivity.class);
+            startActivity(intent);
         }else{
             Toast.makeText(getApplicationContext(),"Usuário ou senha inválidos",Toast.LENGTH_SHORT).show();
         }
